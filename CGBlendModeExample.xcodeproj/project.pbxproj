@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		654E68D150EF9ED21692321F /* Pods_CGBlendModeExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52FB232BC2BF4B7EB692EE09 /* Pods_CGBlendModeExample.framework */; };
 		B885A98220600FB2009F8930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B885A98120600FB2009F8930 /* AppDelegate.swift */; };
 		B885A98420600FB2009F8930 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B885A98320600FB2009F8930 /* ViewController.swift */; };
 		B885A98720600FB2009F8930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B885A98520600FB2009F8930 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52FB232BC2BF4B7EB692EE09 /* Pods_CGBlendModeExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGBlendModeExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		868AAACFD02B64A90141BF73 /* Pods-CGBlendModeExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGBlendModeExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-CGBlendModeExample/Pods-CGBlendModeExample.release.xcconfig"; sourceTree = "<group>"; };
+		91B5496F93CE8379287AEE7A /* Pods-CGBlendModeExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGBlendModeExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CGBlendModeExample/Pods-CGBlendModeExample.debug.xcconfig"; sourceTree = "<group>"; };
 		B885A97E20600FB2009F8930 /* CGBlendModeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGBlendModeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B885A98120600FB2009F8930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B885A98320600FB2009F8930 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				654E68D150EF9ED21692321F /* Pods_CGBlendModeExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9546FA0102A58978FF739BBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91B5496F93CE8379287AEE7A /* Pods-CGBlendModeExample.debug.xcconfig */,
+				868AAACFD02B64A90141BF73 /* Pods-CGBlendModeExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B885A97520600FB2009F8930 = {
 			isa = PBXGroup;
 			children = (
 				B885A98020600FB2009F8930 /* CGBlendModeExample */,
 				B885A97F20600FB2009F8930 /* Products */,
+				9546FA0102A58978FF739BBD /* Pods */,
+				DCCFBF498EBF5EB1F8C14117 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = CGBlendModeExample;
 			sourceTree = "<group>";
 		};
+		DCCFBF498EBF5EB1F8C14117 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52FB232BC2BF4B7EB692EE09 /* Pods_CGBlendModeExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B885A99020600FB2009F8930 /* Build configuration list for PBXNativeTarget "CGBlendModeExample" */;
 			buildPhases = (
+				5AE64851C1EDFA91889DB926 /* [CP] Check Pods Manifest.lock */,
 				B885A97A20600FB2009F8930 /* Sources */,
 				B885A97B20600FB2009F8930 /* Frameworks */,
 				B885A97C20600FB2009F8930 /* Resources */,
+				9B62FBE52BCDF629EA1C9AA2 /* [CP] Embed Pods Frameworks */,
+				7EE1E93A04A555E2ABC0226B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AE64851C1EDFA91889DB926 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CGBlendModeExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EE1E93A04A555E2ABC0226B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CGBlendModeExample/Pods-CGBlendModeExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B62FBE52BCDF629EA1C9AA2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CGBlendModeExample/Pods-CGBlendModeExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChromaColorPicker/ChromaColorPicker.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChromaColorPicker.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CGBlendModeExample/Pods-CGBlendModeExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B885A97A20600FB2009F8930 /* Sources */ = {
@@ -272,6 +353,7 @@
 		};
 		B885A99120600FB2009F8930 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91B5496F93CE8379287AEE7A /* Pods-CGBlendModeExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +369,7 @@
 		};
 		B885A99220600FB2009F8930 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 868AAACFD02B64A90141BF73 /* Pods-CGBlendModeExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
